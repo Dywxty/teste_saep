@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <section class="panel narrow">
+        <h1>Entrar</h1>
+        <p>Acesse o gerenciamento da loja com seu CPF e senha.</p>
+
+        {% if erro %}
+            <p style="color: red;">{{ erro }}</p>
+        {% endif %}
+
+        <form method="post">
+            <label for="nome">NOME</label>
+            <input
+                id="nome"
+                name="nome"
+                type="text"
+                required
+            >
+
+            <label for="cpf">CPF</label>
+            <input
+                id="cpf"
+                name="cpf"
+                type="text"
+                required
+            >
+
+            <label for="senha">Senha</label>
+            <input
+                id="senha"
+                name="senha"
+                type="password"
+                required
+            >
+            <button type="submit">Entrar</button>
+        </form>
+    </section>
+
+</body>
+</html>
+```
